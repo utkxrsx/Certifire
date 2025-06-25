@@ -1,0 +1,81 @@
+body {
+    font-family: 'Playfair Display', serif; /* Changed to match the login page font */
+    color: #aaa7a7; /* Font color matches the login page */
+    background-image: url('../xyz/h7.jpg');
+}
+
+.register-container {
+    background-image: url('../xyz/h5.jpg');
+    padding: 15px;
+    border-radius: 12px;
+    width: 350px;
+    height: 530px;
+    margin: 50px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    align-items: center;
+}
+
+.register-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #aaa7a7; /* Changed to match the login h2 color */
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif; /* Changed to match the login title font */
+    font-style: italic;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    display: block;
+    color: #aaa7a7; /* Changed label color to match login */
+    font-family: 'Playfair Display', serif; /* Changed font family */
+    font-weight: 550;
+    font-style: italic; /* Matches login page style */
+}
+
+.input-group input, .input-group select {
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 0.9rem;
+    background-color: #222;
+    color: #fff;
+}
+
+.input-group input:focus, .input-group select:focus {
+    outline: none;
+    box-shadow: 0 0 6px #d32f2f;
+}
+
+.register-button {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    align-self: flex-start;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #b71c1c;
+}
+
+.error-text {
+    color: #ff4f4f;
+    text-align: center;
+    margin-bottom: 10px;
+}

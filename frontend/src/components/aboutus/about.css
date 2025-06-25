@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+/* General Layout */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    background-image: url('../xyz/h2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff; /* Light text for readability */
+}
+
+/* Hero Section */
+.hero-about {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff3232; /* Dark Red */
+    font-family: 'poppins', sans-serif; /* Using Roboto font */
+    animation: scaleUp 1s ease-in-out;
+}
+
+.about-subtitle {
+    font-size: 1.4rem;
+    color: #f0f0f0;
+    animation: slideInFromLeft 1.2s ease-in-out;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    padding: 20px;
+}
+
+.about-card {
+    background: #2c2c2c;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+.about-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.about-card p {
+    color: #b0b0b0;
+    font-size: 1rem;
+}
+
+/* Team Section */
+.team-section {
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+    width: 90%; /* Adjust width to leave space on the sides */
+    max-width: 1300px; /* Optional: Limit maximum width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+.team-carousel {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 250px; /* Height of the team card section */
+}
+
+.team-wrapper {
+    display: flex;
+    position: absolute;
+    width: calc(200% + 60px); /* Increased width to accommodate extra space */
+    animation: slideInFromRight 20s linear infinite;
+}
+
+.team-card {
+    flex: 0 0 auto;
+    min-width: 250px;
+    background: #2c2c2c;
+    border-radius: 10px;
+    margin: 0 15px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ensure team cards fit perfectly with no gaps */
+.team-wrapper .team-card {
+    flex-shrink: 0;
+}
+
+.team-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    color: #FFD700;
+}
+
+.team-card p {
+    color: #b0b0b0;
+}
+
+/* Sliding Animation */
+@keyframes slideInFromRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Move to half the width of the team-wrapper */
+}
+
+
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    color: #76c7c0;
+    margin-bottom: 15px;
+}
+
+.cta-text {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    background-color: #22c55e;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #1fa141;
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.8); }
+    to { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-card {
+        min-width: 90%; /* Full width for mobile */
+    }
+
+    .about-card {
+        width: 100%;
+    }
+
+    .about-title {
+        font-size: 3rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}

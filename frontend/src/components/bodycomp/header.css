@@ -1,0 +1,94 @@
+/* Header Container */
+.header {
+    width: 97.35%;
+    height: 70px;
+    background-color: black;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Padding for spacing */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* position:fixed; */
+  }
+  
+  /* Sub-container for alignment */
+  .sub-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Logo Container */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Pushes logo to the left */
+    text-decoration: none; /* Remove underline from link */
+  }
+  
+  /* Logo Image Styling */
+  .logo-img {
+    height: 50px; /* Adjust height as needed */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+  }
+  
+  .logo-img:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+  }
+  
+  /* Logo Text Styling */
+  /* .logo-text {
+    color: white; */
+    /* font-size: 20px; /* Adjust font size as needed */
+    /* font-weight: bold; */
+    /* margin-left: 10px; Space between logo and text */
+    /* transition: color 0.3s ease-in-out; Smooth color transition */
+  /* } */
+  
+  .logo-container:hover .logo-text {
+    color: #FFD700; /* Change color on hover */
+  }
+  
+  /* Navigation Button Styles */
+  .nav-button {
+    /* display: flex;
+    align-items: center; */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    margin: 0 15px;
+    position:relative;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transition for scaling effect */
+  }
+  
+  /* Hover Effect for Navigation Button */
+  .nav-button:hover {
+    color: #FFD700; /* Gold color on hover */
+    transform: scale(1.1); /* Slightly increase size on hover */
+  }
+  
+  /* Navigation Link Underline Effect */
+  .nav-button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .nav-button:hover::after {
+    width: 100%;
+  }
+  
+  /* Align Navigation Links to the Right */
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
